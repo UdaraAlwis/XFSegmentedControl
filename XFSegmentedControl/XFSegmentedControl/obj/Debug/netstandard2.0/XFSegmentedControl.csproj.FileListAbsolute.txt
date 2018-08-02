@@ -1,0 +1,9 @@
+C:\Experiments\Xamarin-Playground\XFSegmentedControl\XFSegmentedControl\XFSegmentedControl\bin\Debug\netstandard2.0\XFSegmentedControl.deps.json
+C:\Experiments\Xamarin-Playground\XFSegmentedControl\XFSegmentedControl\XFSegmentedControl\bin\Debug\netstandard2.0\XFSegmentedControl.dll
+C:\Experiments\Xamarin-Playground\XFSegmentedControl\XFSegmentedControl\XFSegmentedControl\bin\Debug\netstandard2.0\XFSegmentedControl.pdb
+C:\Experiments\Xamarin-Playground\XFSegmentedControl\XFSegmentedControl\XFSegmentedControl\obj\Debug\netstandard2.0\XFSegmentedControl.csprojAssemblyReference.cache
+C:\Experiments\Xamarin-Playground\XFSegmentedControl\XFSegmentedControl\XFSegmentedControl\obj\Debug\netstandard2.0\XFSegmentedControl.csproj.CoreCompileInputs.cache
+C:\Experiments\Xamarin-Playground\XFSegmentedControl\XFSegmentedControl\XFSegmentedControl\obj\Debug\netstandard2.0\XFSegmentedControl.AssemblyInfoInputs.cache
+C:\Experiments\Xamarin-Playground\XFSegmentedControl\XFSegmentedControl\XFSegmentedControl\obj\Debug\netstandard2.0\XFSegmentedControl.AssemblyInfo.cs
+C:\Experiments\Xamarin-Playground\XFSegmentedControl\XFSegmentedControl\XFSegmentedControl\obj\Debug\netstandard2.0\XFSegmentedControl.dll
+C:\Experiments\Xamarin-Playground\XFSegmentedControl\XFSegmentedControl\XFSegmentedControl\obj\Debug\netstandard2.0\XFSegmentedControl.pdb
