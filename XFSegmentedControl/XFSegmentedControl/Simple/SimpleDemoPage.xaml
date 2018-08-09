@@ -11,6 +11,7 @@
         <OnPlatform x:TypeArguments="Thickness">
             <On Platform="Android" Value="0" />
             <On Platform="iOS" Value="0,20,0,0" />
+            <On Platform="UWP" Value="0,20,0,0" />
         </OnPlatform>
     </ContentPage.Padding>
 
@@ -43,6 +44,7 @@
                 <OnPlatform x:TypeArguments="Thickness">
                     <On Platform="Android" Value="0" />
                     <On Platform="iOS" Value="10,0,10,10" />
+                    <On Platform="UWP" Value="0" />
                 </OnPlatform>
             </controls:SimSegmentedControl.Padding>
         </controls:SimSegmentedControl>

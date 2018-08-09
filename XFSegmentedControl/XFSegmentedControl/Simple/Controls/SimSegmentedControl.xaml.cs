@@ -112,7 +112,8 @@ namespace XFSegmentedControl.Simple.Controls
                 Tab1LabelView.TextColor =
                 Tab2LabelView.TextColor = SecondaryColor;
             }
-            else if (Device.RuntimePlatform == Device.iOS)
+            else if (Device.RuntimePlatform == Device.iOS
+                     || Device.RuntimePlatform == Device.UWP)
             {
                 Tab1LabelView.FontSize
                     = Device.GetNamedSize(NamedSize.Small, Tab1LabelView);
@@ -167,6 +168,11 @@ namespace XFSegmentedControl.Simple.Controls
                 Tab1LabelView.TextColor = PrimaryColor;
                 Tab2LabelView.TextColor = SecondaryColor;
             }
+            else if (Device.RuntimePlatform == Device.UWP)
+            {
+                Tab1LabelView.Opacity = 1;
+                Tab2LabelView.Opacity = 0.35;
+            }
         }
 
         private void SelectTab2()
@@ -185,6 +191,11 @@ namespace XFSegmentedControl.Simple.Controls
 
                 Tab1LabelView.TextColor = SecondaryColor;
                 Tab2LabelView.TextColor = PrimaryColor;
+            }
+            else if (Device.RuntimePlatform == Device.UWP)
+            {
+                Tab1LabelView.Opacity = 0.35;
+                Tab2LabelView.Opacity = 1;
             }
         }
 

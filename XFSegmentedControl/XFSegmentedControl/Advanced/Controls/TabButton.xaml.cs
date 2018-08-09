@@ -40,6 +40,9 @@ namespace XFSegmentedControl.Advanced.Controls
             if (Device.RuntimePlatform == Device.iOS && TabIndex != 0)
                 VerticalSeparator.IsVisible = true;
 
+            if (Device.RuntimePlatform == Device.UWP)
+                TabLabelView.Opacity = 0.35;
+
             // Set up default color values
             SetUpColorScheme();
 
@@ -72,6 +75,14 @@ namespace XFSegmentedControl.Advanced.Controls
 	            VerticalSeparator.Color =
 	                TabLabelView.TextColor = SecondaryColor;
             }
+            else if (Device.RuntimePlatform == Device.UWP)
+            {
+                TabLabelView.FontSize
+                    = Device.GetNamedSize(NamedSize.Small, TabLabelView);
+
+                TabButtonView.BackgroundColor = PrimaryColor;
+                TabLabelView.TextColor = SecondaryColor;
+            }
         }
 
         private void TabButton_OnClicked(object sender, EventArgs e)
@@ -81,38 +92,45 @@ namespace XFSegmentedControl.Advanced.Controls
             SendTabButtonClicked();
         }
 
-	    private void SetSelectedTabState()
-	    {
-	        // set up platform specific
-	        // properties for SelectTab event
-	        if (Device.RuntimePlatform == Device.Android)
-	        {
-	            HorizontalIndicator.IsVisible = true;
-	        }
-	        if (Device.RuntimePlatform == Device.iOS)
-	        {
-	            TabButtonView.BackgroundColor = SecondaryColor;
-	            TabLabelView.TextColor = PrimaryColor;
-	        }
+        private void SetSelectedTabState()
+        {
+            // set up platform specific
+            // properties for SelectTab event
+            if (Device.RuntimePlatform == Device.Android)
+            {
+                HorizontalIndicator.IsVisible = true;
+            }
+            else if (Device.RuntimePlatform == Device.iOS)
+            {
+                TabButtonView.BackgroundColor = SecondaryColor;
+                TabLabelView.TextColor = PrimaryColor;
+            }
+            else if (Device.RuntimePlatform == Device.UWP)
+            {
+                TabLabelView.Opacity = 1;
+            }
         }
 
-	    private void SetUnselectedTabState()
-	    {
+        private void SetUnselectedTabState()
+        {
             // set up platform specific
             // properties for UnselectTab event
             if (Device.RuntimePlatform == Device.Android)
-	        {
-	            HorizontalIndicator.IsVisible = false;
-	        }
-	        else if (Device.RuntimePlatform == Device.iOS)
-	        {
-	            TabButtonView.BackgroundColor = PrimaryColor;
-
-	            TabLabelView.TextColor = SecondaryColor;
-	        }
+            {
+                HorizontalIndicator.IsVisible = false;
+            }
+            else if (Device.RuntimePlatform == Device.iOS)
+            {
+                TabButtonView.BackgroundColor = PrimaryColor;
+                TabLabelView.TextColor = SecondaryColor;
+            }
+            else if (Device.RuntimePlatform == Device.UWP)
+            {
+                TabLabelView.Opacity = 0.35;
+            }
         }
 
-	    private void SendTabButtonClicked()
+        private void SendTabButtonClicked()
 	    {
 	        TabButtonClicked?.Invoke(this, EventArgs.Empty);
         }

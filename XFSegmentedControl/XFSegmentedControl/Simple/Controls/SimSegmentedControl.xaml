@@ -26,17 +26,18 @@
                 <OnPlatform x:TypeArguments="system:Double">
                     <On Platform="Android" Value="50" />
                     <On Platform="iOS" Value="35" />
+                    <On Platform="UWP" Value="50" />
                 </OnPlatform>
             </Frame.HeightRequest>
             <!--  Platform specific customization values for the border  -->
 
-            <Grid ColumnSpacing="0">
+            <Grid Padding="0" ColumnSpacing="0">
 
                 <!--  Tab button 1  -->
                 <Grid Grid.Column="0" IsClippedToBounds="True">
                     <Button
                         x:Name="Tab1ButtonView"
-                        Margin="-2,-3,-2,0"
+                        Margin="-2,-3,-2,-1"
                         Clicked="Tab1Button_OnClicked" />
                     <Label
                         x:Name="Tab1LabelView"
@@ -59,7 +60,7 @@
                 <Grid Grid.Column="1" IsClippedToBounds="True">
                     <Button
                         x:Name="Tab2ButtonView"
-                        Margin="-2,-3,-2,0"
+                        Margin="-2,-3,-2,-1"
                         Clicked="Tab2Button_OnClicked" />
                     <Label
                         x:Name="Tab2LabelView"

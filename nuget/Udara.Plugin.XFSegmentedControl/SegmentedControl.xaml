@@ -26,6 +26,7 @@
                 <OnPlatform x:TypeArguments="system:Double">
                     <On Platform="Android" Value="50" />
                     <On Platform="iOS" Value="35" />
+                    <On Platform="UWP" Value="50" />
                 </OnPlatform>
             </Frame.HeightRequest>
             <!--  Platform specific customization values for the border  -->

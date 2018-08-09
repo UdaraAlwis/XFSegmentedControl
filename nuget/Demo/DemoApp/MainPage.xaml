@@ -36,13 +36,6 @@
             PrimaryColor="White"
             SecondaryColor="Black"
             SelectedTabIndex="0">
-            <xfsegmentedcontrol:SegmentedControl.HeightRequest>
-                <OnPlatform x:TypeArguments="x:Double">
-                    <On Platform="Android" Value="-1" />
-                    <On Platform="iOS" Value="-1" />
-                    <On Platform="UWP" Value="50" />
-                </OnPlatform>
-            </xfsegmentedcontrol:SegmentedControl.HeightRequest>
             <xfsegmentedcontrol:SegmentedControl.Padding>
                 <OnPlatform x:TypeArguments="Thickness">
                     <On Platform="Android" Value="0" />
