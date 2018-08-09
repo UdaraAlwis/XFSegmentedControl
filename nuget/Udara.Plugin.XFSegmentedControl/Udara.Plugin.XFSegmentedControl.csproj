@@ -5,6 +5,9 @@
     <Authors>Udara Alwis</Authors>
     <Company>Udara Alwis</Company>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Description>Segmented Button Control which has awesome features such as dynamically adding or removing Tab Button elements, setting Colors, and Selected Tab index at run time with full native features and looks and feel.
+Build from pure Xamarin.Forms!</Description>
+    <Copyright>Udara Alwis</Copyright>
   </PropertyGroup>
 
   <ItemGroup>
