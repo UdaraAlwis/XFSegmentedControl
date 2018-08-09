@@ -1,6 +1,7 @@
 ﻿
 using System;
 using System.Collections;
+using System.Windows.Input;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -154,6 +155,8 @@ namespace Udara.Plugin.XFSegmentedControl
 
         public event EventHandler<SelectedTabIndexEventArgs> SelectedTabIndexChanged;
 
+        public ICommand SelectedTabIndexChangedCommand { get; set; }
+
         /// <summary>
         /// Invoke the SelectedTabIndexChanged event
         /// for whoever has subscribed so they can
@@ -165,6 +168,12 @@ namespace Udara.Plugin.XFSegmentedControl
             eventArgs.SelectedTabIndex = SelectedTabIndex;
 
             SelectedTabIndexChanged?.Invoke(this, eventArgs);
+
+            if (SelectedTabIndexChangedCommand !=null &&
+                    SelectedTabIndexChangedCommand.CanExecute(SelectedTabIndex))
+            {
+                SelectedTabIndexChangedCommand.Execute(SelectedTabIndex);
+            }
         }
     }
 }

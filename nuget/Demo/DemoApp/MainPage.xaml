@@ -31,8 +31,92 @@
             HorizontalTextAlignment="Center"
             Text="but some people call it Tabbed Buttons or Rocker Control??!!%##!" />
 
+
         <xfsegmentedcontrol:SegmentedControl
-            x:Name="AdvSegmentedControl"
+            x:Name="SegmentedControl1"
+            PrimaryColor="CornflowerBlue"
+            SecondaryColor="White"
+            SelectedTabIndex="2"
+            SelectedTabIndexChanged="SegmentedControl1_SelectedTabIndexChanged">
+            <xfsegmentedcontrol:SegmentedControl.Padding>
+                <OnPlatform x:TypeArguments="Thickness">
+                    <On Platform="Android" Value="0" />
+                    <On Platform="iOS" Value="10,0,10,10" />
+                    <On Platform="UWP" Value="0" />
+                </OnPlatform>
+            </xfsegmentedcontrol:SegmentedControl.Padding>
+            <xfsegmentedcontrol:SegmentedControl.TabButtonsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Monkeys</x:String>
+                    <x:String>Minions</x:String>
+                    <x:String>Penguins</x:String>
+                    <x:String>Foxes</x:String>
+                </x:Array>
+            </xfsegmentedcontrol:SegmentedControl.TabButtonsSource>
+        </xfsegmentedcontrol:SegmentedControl>
+
+        <Grid
+            BackgroundColor="#a2bef4"
+            HeightRequest="100"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="Start">
+
+            <Grid
+                x:Name="ContentView1"
+                Padding="10"
+                IsVisible="True">
+                <Label
+                    FontSize="Medium"
+                    HorizontalOptions="CenterAndExpand"
+                    HorizontalTextAlignment="Center"
+                    Text="Monkeys are awesome bundi jungle creatures banana tour."
+                    TextColor="White"
+                    VerticalOptions="StartAndExpand" />
+            </Grid>
+
+            <Grid
+                x:Name="ContentView2"
+                Padding="10"
+                IsVisible="False">
+                <Label
+                    FontSize="Medium"
+                    HorizontalOptions="CenterAndExpand"
+                    HorizontalTextAlignment="Center"
+                    Text="Minions are funny creatures employed by Gru.."
+                    TextColor="White"
+                    VerticalOptions="StartAndExpand" />
+            </Grid>
+
+            <Grid
+                x:Name="ContentView3"
+                Padding="10"
+                IsVisible="False">
+                <Label
+                    FontSize="Medium"
+                    HorizontalOptions="CenterAndExpand"
+                    HorizontalTextAlignment="Center"
+                    Text="Penguins are pineable butter tree house in."
+                    TextColor="White"
+                    VerticalOptions="StartAndExpand" />
+            </Grid>
+
+            <Grid
+                x:Name="ContentView4"
+                Padding="10"
+                IsVisible="False">
+                <Label
+                    FontSize="Medium"
+                    HorizontalOptions="CenterAndExpand"
+                    HorizontalTextAlignment="Center"
+                    Text="Foxes are bing bottle cannes of the."
+                    TextColor="White"
+                    VerticalOptions="StartAndExpand" />
+            </Grid>
+        </Grid>
+
+
+        <xfsegmentedcontrol:SegmentedControl
+            x:Name="SegmentedControl2"
             PrimaryColor="White"
             SecondaryColor="Black"
             SelectedTabIndex="0">
