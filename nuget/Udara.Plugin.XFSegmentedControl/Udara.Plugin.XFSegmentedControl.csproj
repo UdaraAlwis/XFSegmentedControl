@@ -8,6 +8,12 @@
     <Description>Segmented Button Control which has awesome features such as dynamically adding or removing Tab Button elements, setting Colors, and Selected Tab index at run time with full native features and looks and feel.
 Build from pure Xamarin.Forms!</Description>
     <Copyright>Udara Alwis</Copyright>
+    <PackageLicenseUrl>https://github.com/UdaraAlwis/XFSegmentedControl/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/UdaraAlwis/XFSegmentedControl/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/UdaraAlwis/XFSegmentedControl</RepositoryUrl>
+    <PackageTags>Segmented Button Control Xamarin Forms Xamarin.Forms Tabbed Button Gruped Button</PackageTags>
+    <PackageReleaseNotes>[1.0.0]
+All good with support for Android, iOS, UWP</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
