@@ -12,7 +12,9 @@
     <RepositoryUrl>https://github.com/UdaraAlwis/XFSegmentedControl</RepositoryUrl>
     <PackageTags>Segmented Button Control Xamarin Forms Xamarin.Forms Tabbed Button Gruped Button</PackageTags>
     <PackageReleaseNotes>[1.0.0]
-All good with support for Android, iOS, UWP</PackageReleaseNotes>
+All good with support for Android, iOS, UWP
+[1.0.1]
+Fix a bug in UWP</PackageReleaseNotes>
     <PackageIconUrl>https://raw.githubusercontent.com/UdaraAlwis/XFSegmentedControl/master/nuget/nugeticon.png</PackageIconUrl>
     <Version>1.0.1</Version>
   </PropertyGroup>
