@@ -8,7 +8,7 @@ Segmented Button Control for Xamarin.Forms (Android, iOS, UWP) with awesome feat
 Setting it up:
 
 * Grab it on NuGet: https://www.nuget.org/packages/Udara.Plugin.XFSegmentedControl/ [![NuGet](https://img.shields.io/nuget/v/Udara.Plugin.XFSegmentedControl.svg?label=NuGet)](https://www.nuget.org/packages/Udara.Plugin.XFSegmentedControl/)
-* Just install in your PCL project, you're good go!
+* Just install in your PCL/Dot Net Standard Xamarin.Forms project, you're good go! (no need in the platform projects) because its that awesome and lightweight! :D 
 
 
 #### XAML Set up
