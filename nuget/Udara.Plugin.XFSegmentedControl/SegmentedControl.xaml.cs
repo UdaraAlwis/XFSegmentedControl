@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -25,6 +24,13 @@ namespace Udara.Plugin.XFSegmentedControl
 
                         ((TabButton)tabButton).UpdateTabButtonState(
                             ((SegmentedControl)bindable).SelectedTabIndex);
+                    }
+                    
+                    // to solve a little bug in Android & UWP
+                    if (Device.RuntimePlatform == Device.Android ||
+                        Device.RuntimePlatform == Device.UWP)
+                    {
+                        ((SegmentedControl)bindable).TabButtonHolder.BackgroundColor = ((Color)newValue);
                     }
                 },
                 defaultBindingMode: BindingMode.TwoWay);

@@ -25,9 +25,6 @@ namespace DemoApp
                 "Tab 2",
                 "Tab 3",
                 "Tab 4",
-                "Tab 5",
-                "Tab 6",
-                "Tab 7",
             };
 
             SegmentedControl1.TabButtonsSource = _tabSource;
