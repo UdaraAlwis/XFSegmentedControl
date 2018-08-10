@@ -1,6 +1,9 @@
 A Segmented Button Control in pure Xamarin.Forms!
 ===========
 
+<img src="https://github.com/UdaraAlwis/XFSegmentedControl/blob/master/nuget/screenshots/iOS.gif"  height="120" /> <img src="https://github.com/UdaraAlwis/XFSegmentedControl/blob/master/nuget/screenshots/Android.gif"  height="120" /> <img src="https://github.com/UdaraAlwis/XFSegmentedControl/blob/master/nuget/screenshots/UWP.gif"  height="120" />
+
+
 A Segmented Button Control, or as some call it Grouped Button Control, or Tabbed Button Control or some even call the Rocker Control, is what I'm gonna share with yol today, built 100% from Xamarin.Forms!
 
 Yeah such a platform specific UI element, right out of Xamarin.Forms without a single line of native code, how's that even? Well if you've been following my blog for a while, you know that I'm all about pushing them limits of any given platform and achieve the impossibru! ;)
