@@ -5,8 +5,66 @@ Segmented Button Control for Xamarin.Forms (Android, iOS, UWP) with awesome feat
 
 <img src="https://github.com/UdaraAlwis/XFSegmentedControl/blob/master/nuget/screenshots/iOS.gif"  height="95" /> <img src="https://github.com/UdaraAlwis/XFSegmentedControl/blob/master/nuget/screenshots/Android.gif"  height="95" /> <img src="https://github.com/UdaraAlwis/XFSegmentedControl/blob/master/nuget/screenshots/UWP.gif"  height="95" />
 
+Setting it up:
+
 * Grab it on NuGet: https://www.nuget.org/packages/Udara.Plugin.XFSegmentedControl/ [![NuGet](https://img.shields.io/nuget/v/Udara.Plugin.XFSegmentedControl.svg?label=NuGet)](https://www.nuget.org/packages/Udara.Plugin.XFSegmentedControl/)
 * Just install in your PCL project, you're good go!
+
+
+#### XAML Set up
+
+```xml
+xmlns:xfsegmentedcontrol="clr-namespace:Udara.Plugin.XFSegmentedControl;assembly=Udara.Plugin.XFSegmentedControl"
+```
+
+```
+<xfsegmentedcontrol:SegmentedControl
+	x:Name="SegmentedControl1"
+	PrimaryColor="White"
+	SecondaryColor="Black"
+	SelectedTabIndex="2"
+	SelectedTabIndexChanged="SegmentedControl1_SelectedTabIndexChanged">
+	<xfsegmentedcontrol:SegmentedControl.Padding>
+		<OnPlatform x:TypeArguments="Thickness">
+			<On Platform="Android" Value="0" />
+			<On Platform="iOS" Value="10,0,10,10" />
+			<On Platform="UWP" Value="0" />
+		</OnPlatform>
+	</xfsegmentedcontrol:SegmentedControl.Padding>
+	<xfsegmentedcontrol:SegmentedControl.TabButtonsSource>
+		<x:Array Type="{x:Type x:String}">
+			<x:String>Tab 1</x:String>
+			<x:String>Tab 2</x:String>
+			<x:String>Tab 3</x:String>
+			<x:String>Tab 4</x:String>
+		</x:Array>
+	</xfsegmentedcontrol:SegmentedControl.TabButtonsSource>
+</xfsegmentedcontrol:SegmentedControl>
+```
+
+#### SelectedTabIndexChanged Event
+
+```
+private void SegmentedControl1_SelectedTabIndexChanged
+		(object sender, SelectedTabIndexEventArgs e)
+{
+	Label1.Text 
+		= $"Currently selected - Tab {e.SelectedTabIndex + 1}";
+}
+```
+
+#### Bindable Properties
+
+```TabButtonsSource```: Gets or sets Item Source
+```SelectedTabIndex```: Gets or sets the current selected Tab/Button/Segment index
+```PrimaryColor```: Gets or sets the Primary color of the element
+```SecondaryColor```: Gets or sets the Secondary color of the element
+
+#### Command Handler
+```SelectedTabIndexChangedCommand```: Called when the selected Tab/Button/Segment is changed
+
+#### Event Handler
+```SelectedTabIndexChanged```: Called when the selected Tab/Button/Segment is changed
 
 How I built it?
 ---------------
