@@ -4,8 +4,7 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:xfsegmentedcontrol="clr-namespace:Udara.Plugin.XFSegmentedControl;assembly=Udara.Plugin.XFSegmentedControl"
-    Title="Segmented Button Control"
-    BackgroundColor="#f0f6ff">
+    Title="Segmented Button Control">
 
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness">
@@ -31,103 +30,36 @@
             HorizontalTextAlignment="Center"
             Text="but some people call it Tabbed Buttons or Rocker Control??!!%##!" />
 
+        <StackLayout x:Name="Layout1" Padding="0,20,0,0">
 
-        <xfsegmentedcontrol:SegmentedControl
-            x:Name="SegmentedControl1"
-            PrimaryColor="CornflowerBlue"
-            SecondaryColor="White"
-            SelectedTabIndex="2"
-            SelectedTabIndexChanged="SegmentedControl1_SelectedTabIndexChanged">
-            <xfsegmentedcontrol:SegmentedControl.Padding>
-                <OnPlatform x:TypeArguments="Thickness">
-                    <On Platform="Android" Value="0" />
-                    <On Platform="iOS" Value="10,0,10,10" />
-                    <On Platform="UWP" Value="0" />
-                </OnPlatform>
-            </xfsegmentedcontrol:SegmentedControl.Padding>
-            <xfsegmentedcontrol:SegmentedControl.TabButtonsSource>
-                <x:Array Type="{x:Type x:String}">
-                    <x:String>Monkeys</x:String>
-                    <x:String>Minions</x:String>
-                    <x:String>Penguins</x:String>
-                    <x:String>Foxes</x:String>
-                </x:Array>
-            </xfsegmentedcontrol:SegmentedControl.TabButtonsSource>
-        </xfsegmentedcontrol:SegmentedControl>
-
-        <Grid
-            BackgroundColor="#a2bef4"
-            HeightRequest="100"
-            HorizontalOptions="FillAndExpand"
-            VerticalOptions="Start">
+            <xfsegmentedcontrol:SegmentedControl
+                x:Name="SegmentedControl1"
+                PrimaryColor="White"
+                SecondaryColor="Black"
+                SelectedTabIndex="2"
+                SelectedTabIndexChanged="SegmentedControl1_SelectedTabIndexChanged">
+                <xfsegmentedcontrol:SegmentedControl.Padding>
+                    <OnPlatform x:TypeArguments="Thickness">
+                        <On Platform="Android" Value="0" />
+                        <On Platform="iOS" Value="10,0,10,10" />
+                        <On Platform="UWP" Value="0" />
+                    </OnPlatform>
+                </xfsegmentedcontrol:SegmentedControl.Padding>
+            </xfsegmentedcontrol:SegmentedControl>
 
             <Grid
-                x:Name="ContentView1"
-                Padding="10"
-                IsVisible="True">
+                Padding="20"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Start">
+
                 <Label
+                    x:Name="Label1"
                     FontSize="Medium"
                     HorizontalOptions="CenterAndExpand"
                     HorizontalTextAlignment="Center"
-                    Text="Monkeys are awesome bundi jungle creatures banana tour."
-                    TextColor="White"
-                    VerticalOptions="StartAndExpand" />
+                    Text="Currently selected - Tab 3" />
             </Grid>
-
-            <Grid
-                x:Name="ContentView2"
-                Padding="10"
-                IsVisible="False">
-                <Label
-                    FontSize="Medium"
-                    HorizontalOptions="CenterAndExpand"
-                    HorizontalTextAlignment="Center"
-                    Text="Minions are funny creatures employed by Gru.."
-                    TextColor="White"
-                    VerticalOptions="StartAndExpand" />
-            </Grid>
-
-            <Grid
-                x:Name="ContentView3"
-                Padding="10"
-                IsVisible="False">
-                <Label
-                    FontSize="Medium"
-                    HorizontalOptions="CenterAndExpand"
-                    HorizontalTextAlignment="Center"
-                    Text="Penguins are pineable butter tree house in."
-                    TextColor="White"
-                    VerticalOptions="StartAndExpand" />
-            </Grid>
-
-            <Grid
-                x:Name="ContentView4"
-                Padding="10"
-                IsVisible="False">
-                <Label
-                    FontSize="Medium"
-                    HorizontalOptions="CenterAndExpand"
-                    HorizontalTextAlignment="Center"
-                    Text="Foxes are bing bottle cannes of the."
-                    TextColor="White"
-                    VerticalOptions="StartAndExpand" />
-            </Grid>
-        </Grid>
-
-
-        <xfsegmentedcontrol:SegmentedControl
-            x:Name="SegmentedControl2"
-            PrimaryColor="White"
-            SecondaryColor="Black"
-            SelectedTabIndex="0">
-            <xfsegmentedcontrol:SegmentedControl.Padding>
-                <OnPlatform x:TypeArguments="Thickness">
-                    <On Platform="Android" Value="0" />
-                    <On Platform="iOS" Value="10,0,10,10" />
-                    <On Platform="UWP" Value="0" />
-                </OnPlatform>
-            </xfsegmentedcontrol:SegmentedControl.Padding>
-        </xfsegmentedcontrol:SegmentedControl>
+        </StackLayout>
 
         <!--  Primary Color Pallet  -->
         <Label
@@ -200,7 +132,7 @@
 
         <!--  Secondary Color Pallet  -->
         <Label
-            Margin="0,5,0,5"
+            Margin="0,20,0,5"
             HorizontalTextAlignment="Center"
             Text="Secondary Color Pallet" />
         <Grid Margin="10,0,10,0" HorizontalOptions="FillAndExpand">
@@ -267,10 +199,9 @@
             </Grid.RowDefinitions>
         </Grid>
 
-
         <!--  Add or Remove Tabs  -->
         <Label
-            Margin="0,5,0,5"
+            Margin="0,20,0,5"
             HorizontalTextAlignment="Center"
             Text="Add or Remove Tabs" />
         <Grid Margin="10,0,10,0" HorizontalOptions="FillAndExpand">

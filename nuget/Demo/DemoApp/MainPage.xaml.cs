@@ -26,47 +26,23 @@ namespace DemoApp
                 "Tab 3",
                 "Tab 4",
                 "Tab 5",
+                "Tab 6",
+                "Tab 7",
             };
 
-            SegmentedControl2.TabButtonsSource = _tabSource;
+            SegmentedControl1.TabButtonsSource = _tabSource;
         }
         
         private void SegmentedControl1_SelectedTabIndexChanged(object sender, SelectedTabIndexEventArgs e)
         {
-            switch (e.SelectedTabIndex)
-            {
-                case 0:
-                    ContentView1.IsVisible = true;
-                    ContentView2.IsVisible = false;
-                    ContentView3.IsVisible = false;
-                    ContentView4.IsVisible = false;
-                    break;
-                case 1:
-                    ContentView1.IsVisible = false;
-                    ContentView2.IsVisible = true;
-                    ContentView3.IsVisible = false;
-                    ContentView4.IsVisible = false;
-                    break;
-                case 2:
-                    ContentView1.IsVisible = false;
-                    ContentView2.IsVisible = false;
-                    ContentView3.IsVisible = true;
-                    ContentView4.IsVisible = false;
-                    break;
-                case 3:
-                    ContentView1.IsVisible = false;
-                    ContentView2.IsVisible = false;
-                    ContentView3.IsVisible = false;
-                    ContentView4.IsVisible = true;
-                    break;
-            }
+            Label1.Text = $"Currently selected - Tab {e.SelectedTabIndex + 1}";
         }
 
         private void AddTabButton_OnClicked(object sender, EventArgs e)
         {
             _tabSource.Add($"Tab {_tabSource.Count + 1}");
 
-            SegmentedControl2.TabButtonsSource = new ObservableCollection<string>(_tabSource);
+            SegmentedControl1.TabButtonsSource = new ObservableCollection<string>(_tabSource);
         }
 
         private void RemoveTabButton_OnClicked(object sender, EventArgs e)
@@ -74,17 +50,21 @@ namespace DemoApp
             if (_tabSource.Count > 2)
                 _tabSource.Remove(_tabSource.Last());
 
-            SegmentedControl2.TabButtonsSource = new ObservableCollection<string>(_tabSource);
+            SegmentedControl1.TabButtonsSource = new ObservableCollection<string>(_tabSource);
         }
 
         private void PrimaryColorButton_OnClicked(object sender, EventArgs e)
         {
-            SegmentedControl2.PrimaryColor = ((Button)sender).BackgroundColor;
+            SegmentedControl1.PrimaryColor = ((Button)sender).BackgroundColor;
+
+            Layout1.BackgroundColor = ((Button)sender).BackgroundColor;
         }
 
         private void SecondaryColorButton_OnClicked(object sender, EventArgs e)
         {
-            SegmentedControl2.SecondaryColor = ((Button)sender).BackgroundColor;
+            SegmentedControl1.SecondaryColor = ((Button)sender).BackgroundColor;
+
+            Label1.TextColor = ((Button)sender).BackgroundColor;
         }
     }
 }
