@@ -56,8 +56,11 @@ private void SegmentedControl1_SelectedTabIndexChanged
 #### Bindable Properties
 
 ```TabButtonsSource```: Gets or sets Item Source
+
 ```SelectedTabIndex```: Gets or sets the current selected Tab/Button/Segment index
+
 ```PrimaryColor```: Gets or sets the Primary color of the element
+
 ```SecondaryColor```: Gets or sets the Secondary color of the element
 
 #### Command Handler
