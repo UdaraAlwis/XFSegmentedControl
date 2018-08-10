@@ -1,8 +1,15 @@
-A Segmented Button Control in pure Xamarin.Forms!
+A Segmented Button Control for Xamarin.Forms!
 ===========
 
-<img src="https://github.com/UdaraAlwis/XFSegmentedControl/blob/master/nuget/screenshots/iOS.gif"  height="120" /> <img src="https://github.com/UdaraAlwis/XFSegmentedControl/blob/master/nuget/screenshots/Android.gif"  height="120" /> <img src="https://github.com/UdaraAlwis/XFSegmentedControl/blob/master/nuget/screenshots/UWP.gif"  height="120" />
+Segmented Button Control for Xamarin.Forms (Android, iOS, UWP) with awesome features, such as dynamically adding or removing Tab Button elements, setting Colors, and Selected Index at run time with full native look and feel. Built from pure Xamarin.Forms, lightweight, no custom renders nor platform implementations! ;)
 
+<img src="https://github.com/UdaraAlwis/XFSegmentedControl/blob/master/nuget/screenshots/iOS.gif"  height="95" /> <img src="https://github.com/UdaraAlwis/XFSegmentedControl/blob/master/nuget/screenshots/Android.gif"  height="95" /> <img src="https://github.com/UdaraAlwis/XFSegmentedControl/blob/master/nuget/screenshots/UWP.gif"  height="95" />
+
+* Grab it on NuGet: https://www.nuget.org/packages/Udara.Plugin.XFSegmentedControl/ [![NuGet](https://img.shields.io/nuget/v/Udara.Plugin.XFSegmentedControl.svg?label=NuGet)](https://www.nuget.org/packages/Udara.Plugin.XFSegmentedControl/)
+* Just install in your PCL project, you're good go!
+
+How I built it?
+---------------
 
 A Segmented Button Control, or as some call it Grouped Button Control, or Tabbed Button Control or some even call the Rocker Control, is what I'm gonna share with yol today, built 100% from Xamarin.Forms!
 
