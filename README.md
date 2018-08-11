@@ -13,7 +13,7 @@ Setting it up:
 
 #### XAML Set up
 
-```xml
+```xaml
 xmlns:xfsegmentedcontrol="clr-namespace:Udara.Plugin.XFSegmentedControl;assembly=Udara.Plugin.XFSegmentedControl"
 ```
 
@@ -64,9 +64,12 @@ private void SegmentedControl1_SelectedTabIndexChanged
 ```SecondaryColor```: Gets or sets the Secondary color of the element, type of Color
 
 #### Event Handler / Command
-```SelectedTabIndexChanged```: Called when the selected Tab/Button/Segment is changed, returns SelectedTabIndexEventArgs object which contains updated index, SelectedTabIndex, type of int
 
-```SelectedTabIndexChangedCommand```: Called when the selected Tab/Button/Segment is changed, returns the updated index, type of int
+Called when the selected Tab/Button/Segment is changed
+
+```SelectedTabIndexChanged```: returns SelectedTabIndexEventArgs object which contains updated index, SelectedTabIndex, type of int
+
+```SelectedTabIndexChangedCommand```: returns the updated index, type of int
 
 How I built it?
 ---------------
