@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Windows.Input;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -97,15 +98,15 @@ namespace Udara.Plugin.XFSegmentedControl
         public static readonly BindableProperty TabButtonsSourceProperty
             = BindableProperty.Create(
                 nameof(TabButtonsSource),
-                typeof(IEnumerable),
+                typeof(IEnumerable<string>),
                 typeof(SegmentedControl),
                 null,
         propertyChanged: OnTabButtonsPropertyChanged,
         defaultBindingMode: BindingMode.TwoWay);
 
-        public IEnumerable TabButtonsSource
+        public IEnumerable<string> TabButtonsSource
         {
-            get { return (IEnumerable)GetValue(TabButtonsSourceProperty); }
+            get { return (IEnumerable<string>)GetValue(TabButtonsSourceProperty); }
             set { SetValue(TabButtonsSourceProperty, value); }
         }
 

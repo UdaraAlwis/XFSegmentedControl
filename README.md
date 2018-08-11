@@ -1,14 +1,14 @@
 A Segmented Button Control for Xamarin.Forms!
 ===========
 
-Segmented Button Control for Xamarin.Forms (Android, iOS, UWP) with awesome features, such as dynamically adding or removing Tab Button elements, setting Colors, and Selected Index at run time with full native look and feel. Built from pure Xamarin.Forms, lightweight, no custom renders nor platform implementations! ;)
+Segmented Button Control for Xamarin.Forms (Android, iOS, UWP) with awesome features, such as dynamically adding or removing Tab Button elements, setting Colors, and Selected Index at run time with full native look and feel. Built from pure Xamarin.Forms, lightweight, no custom renders nor platform implementations, and it's awesome! ;)
 
 <img src="https://github.com/UdaraAlwis/XFSegmentedControl/blob/master/nuget/screenshots/iOS.gif"  height="95" /> <img src="https://github.com/UdaraAlwis/XFSegmentedControl/blob/master/nuget/screenshots/Android.gif"  height="95" /> <img src="https://github.com/UdaraAlwis/XFSegmentedControl/blob/master/nuget/screenshots/UWP.gif"  height="95" />
 
 Setting it up:
 
 * Grab it on NuGet: https://www.nuget.org/packages/Udara.Plugin.XFSegmentedControl/ [![NuGet](https://img.shields.io/nuget/v/Udara.Plugin.XFSegmentedControl.svg?label=NuGet)](https://www.nuget.org/packages/Udara.Plugin.XFSegmentedControl/)
-* Just install in your Xamarin.Forms PCL/Dot Net Standard  project, you're good go! (no need in the platform projects) because it's that awesome and lightweight! :D 
+* Just install in your Xamarin.Forms PCL/Dot Net Standard  project, you're good go! (no need to install in the platform projects) because it's that awesome and lightweight! :D 
 
 
 #### XAML Set up
@@ -55,19 +55,18 @@ private void SegmentedControl1_SelectedTabIndexChanged
 
 #### Bindable Properties
 
-```TabButtonsSource```: Gets or sets Item Source
+```TabButtonsSource```: Gets or sets Item Source of Tabs, type of IEnumerable<string> 
 
-```SelectedTabIndex```: Gets or sets the current selected Tab/Button/Segment index
+```SelectedTabIndex```: Gets or sets the current selected Tab/Button/Segment index, type of int
 
-```PrimaryColor```: Gets or sets the Primary color of the element
+```PrimaryColor```: Gets or sets the Primary color of the element, type of Color
 
-```SecondaryColor```: Gets or sets the Secondary color of the element
+```SecondaryColor```: Gets or sets the Secondary color of the element, type of Color
 
-#### Command Handler
-```SelectedTabIndexChangedCommand```: Called when the selected Tab/Button/Segment is changed
+#### Event Handler / Command
+```SelectedTabIndexChanged```: Called when the selected Tab/Button/Segment is changed, returns SelectedTabIndexEventArgs object which contains updated index, SelectedTabIndex, type of int
 
-#### Event Handler
-```SelectedTabIndexChanged```: Called when the selected Tab/Button/Segment is changed
+```SelectedTabIndexChangedCommand```: Called when the selected Tab/Button/Segment is changed, returns the updated index, type of int
 
 How I built it?
 ---------------
