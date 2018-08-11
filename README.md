@@ -17,7 +17,7 @@ Setting it up:
 xmlns:xfsegmentedcontrol="clr-namespace:Udara.Plugin.XFSegmentedControl;assembly=Udara.Plugin.XFSegmentedControl"
 ```
 
-```
+```xaml
 <xfsegmentedcontrol:SegmentedControl
 	x:Name="SegmentedControl1"
 	PrimaryColor="White"
@@ -44,7 +44,7 @@ xmlns:xfsegmentedcontrol="clr-namespace:Udara.Plugin.XFSegmentedControl;assembly
 
 #### SelectedTabIndexChanged Event
 
-```
+```csharp
 private void SegmentedControl1_SelectedTabIndexChanged
 		(object sender, SelectedTabIndexEventArgs e)
 {
