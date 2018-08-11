@@ -24,13 +24,6 @@ xmlns:xfsegmentedcontrol="clr-namespace:Udara.Plugin.XFSegmentedControl;assembly
 	SecondaryColor="Black"
 	SelectedTabIndex="2"
 	SelectedTabIndexChanged="SegmentedControl1_SelectedTabIndexChanged">
-	<xfsegmentedcontrol:SegmentedControl.Padding>
-		<OnPlatform x:TypeArguments="Thickness">
-			<On Platform="Android" Value="0" />
-			<On Platform="iOS" Value="10,0,10,10" />
-			<On Platform="UWP" Value="0" />
-		</OnPlatform>
-	</xfsegmentedcontrol:SegmentedControl.Padding>
 	<xfsegmentedcontrol:SegmentedControl.TabButtonsSource>
 		<x:Array Type="{x:Type x:String}">
 			<x:String>Tab 1</x:String>
@@ -65,11 +58,11 @@ private void SegmentedControl1_SelectedTabIndexChanged
 
 #### Event Handler / Command
 
-Called when the selected Tab/Button/Segment is changed
+Fires when the selected Tab/Button/Segment is changed
 
-```SelectedTabIndexChanged```: returns SelectedTabIndexEventArgs object which contains updated index, SelectedTabIndex, type of int
+```SelectedTabIndexChanged```: Gets SelectedTabIndexEventArgs contains updated index, SelectedTabIndex, type of int
 
-```SelectedTabIndexChangedCommand```: returns the updated index, type of int
+```SelectedTabIndexChangedCommand```: Gets the updated index as a param, type of int
 
 How I built it?
 ---------------
