@@ -1,4 +1,4 @@
-A Segmented Button Control for Xamarin.Forms!
+Segmented Button Control for Xamarin.Forms!
 ===========
 
 Segmented Button Control for Xamarin.Forms (Android, iOS, UWP) with awesome features, such as dynamically adding or removing Tab Button elements, setting Colors, and Selected Index at run time with full native look and feel. Built from pure Xamarin.Forms, lightweight, no custom renders nor platform implementations, and it's awesome! ;)
