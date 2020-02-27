@@ -4,7 +4,9 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:controls="clr-namespace:XFSegmentedControl.Simple.Controls;assembly=XFSegmentedControl"
+    xmlns:iOsSpecific="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     Title="Simple Segmented Control Page"
+    iOsSpecific:Page.UseSafeArea="true"
     BackgroundColor="CornflowerBlue">
 
     <ContentPage.Padding>
