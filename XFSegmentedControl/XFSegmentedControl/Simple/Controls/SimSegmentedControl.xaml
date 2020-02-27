@@ -35,7 +35,7 @@
 
                 <!--  Tab button 1  -->
                 <Grid Grid.Column="0" IsClippedToBounds="True">
-                    <Button
+                    <ImageButton
                         x:Name="Tab1ButtonView"
                         Margin="-2,-3,-2,-1"
                         Clicked="Tab1Button_OnClicked" />
@@ -58,7 +58,7 @@
 
                 <!--  Tab button 2  -->
                 <Grid Grid.Column="1" IsClippedToBounds="True">
-                    <Button
+                    <ImageButton
                         x:Name="Tab2ButtonView"
                         Margin="-2,-3,-2,-1"
                         Clicked="Tab2Button_OnClicked" />
